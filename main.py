@@ -32,7 +32,7 @@ cascade = cv2.CascadeClassifier(path_cascade)
 cap = cv2.VideoCapture(0)
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 resolution = (1280, 720)
-fps = 30.0
+fps = 60.0
 out = cv2.VideoWriter('./demo/output.avi', fourcc, fps, resolution)
 
 while True:
