@@ -36,4 +36,4 @@ def webcam(resolution):
     return Response(cam.feed(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    app.run(debug=True) # set debug=false in production
+    app.run(debug=True) # set debug=false in juptyer
