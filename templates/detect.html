@@ -1,0 +1,6 @@
+{% extends "layout_nosidebar.html" %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<img id="bg" src="{{ url_for('webcam', resolution=resolution) }}">
+{% endblock content %}
