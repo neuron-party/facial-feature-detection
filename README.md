@@ -1,4 +1,4 @@
-# face-detection-cnn-v1
+# facial feature detection
 Version 1 of a Convolutional Neural Network trained with 200,000 images of celebrities to detect standard facial features (smiling, attractiveness, glasses, etc). Currently optimizing and revamping this project, as well as an implementation of this model onto a website (flask does not work properly yet).
 
 REQUIREMENTS:
