@@ -1,11 +1,22 @@
-# facial feature detection
-Version 1 of a Convolutional Neural Network trained with 200,000 images of celebrities to detect standard facial features (smiling, attractiveness, glasses, etc). Currently optimizing and revamping this project, as well as an implementation of this model onto a website (flask does not work properly yet).
+# Facial Feature Detection
 
-REQUIREMENTS:
-packages: jupyter, pytorch, opencv, tqdm
+## Overview
+##### `notebooks/` - showcases the process of the ML pipeline
+- `1. extract_faces.ipynb` - data cleaning
+- `2. pytorch.ipynb` - training, validation
+- `3. eval.ipynb` - testing, visualization of results
 
-full packages (to train yourself): jupyter, pytorch, opencv, tqdm, pandas, numpy, matplotlib, flask
+##### `main.py` - entrypoint for running the live facial feature detection (`%run -i main.py` in ipython console)
 
-Download the pretrained model here (drop into resources/models): https://drive.google.com/file/d/1rl8AH0e4BLdb3lMrH8UKpxI7cc2n49cd/view?usp=sharing and https://drive.google.com/file/d/1Pjc_qy7PE6h-FQxXR0loSdMiU1Oxzi_l/view?usp=sharing; then run main.py. (%run -i main.py) in python console in jupyter lab.
+##### `webpage.py` - entrypoint for running the flask hosted webpage
 
-To train the model yourself, download the dataset here: https://www.kaggle.com/jessicali9530/celeba-dataset
+## Instructions
+To run `main.py` or `webpage.py`, you need the model files. You can either:
+1) download the pretrained models here:
+   - [cae.pth (optional)](https://drive.google.com/file/d/1rl8AH0e4BLdb3lMrH8UKpxI7cc2n49cd/view?usp=sharing)
+   - [cls.pth (required)](https://drive.google.com/file/d/1Pjc_qy7PE6h-FQxXR0loSdMiU1Oxzi_l/view?usp=sharing)
+   - drag and drop the models in `resources/models/`
+
+OR
+
+2) download the [CelebA dataset](https://www.kaggle.com/jessicali9530/celeba-dataset) and train your own models by running the `notebooks` in order
