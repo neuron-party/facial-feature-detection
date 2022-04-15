@@ -71,17 +71,21 @@ while True:
                 color=(255, 255, 0), # BGR
                 thickness=1)
             
-            d = 13
+            # SELECT SPECIFIC FEATURES
+            f = ['Smiling', 'Attractive', 'Bangs']
+            labels = {x:labels[x] for x in f}
+            
+            d = 30
             for k, v in labels.items():
                 cv2.putText(
                     img=frame,
                     text=f'{k}:{v:3.2f}',
                     org=(x, y + h + d),
                     fontFace=cv2.FONT_HERSHEY_SIMPLEX,
-                    fontScale=.5,
-                    color=(0, 255, 0), # BGR
-                    thickness=1)
-                d += 13
+                    fontScale=1.0,
+                    color=(255, 255, 0), # BGR
+                    thickness=2)
+                d += 30
 
     out.write(frame)
     cv2.imshow('frame', frame)
